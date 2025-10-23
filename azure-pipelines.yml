@@ -2,10 +2,10 @@ trigger:
   - main
 
 pool:
-  name: 'test'
+  name: default
 
 variables:
-  nodeVersion: '18.x'
+  nodeVersion: '18.0'
 
 steps:
   # Install Node.js
