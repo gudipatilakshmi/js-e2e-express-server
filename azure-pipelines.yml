@@ -45,3 +45,8 @@ steps:
       artifactName: 'nodejs-app'
       targetPath: '$(Build.ArtifactStagingDirectory)'
     displayName: 'Publish pipeline artifact'
+
+  - task: Cache@2
+    inputs:
+      key: '**/yarn.lock | */asset.json'
+      path: '$(System.DefaultWorkingDirectory)'
